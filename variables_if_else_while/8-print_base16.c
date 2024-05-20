@@ -15,6 +15,7 @@ int main(void)
 	while (i <= 16)
 	{
 		putchar(hex[i]);
+		i++;
 	}
 	putchar('\n');
 	return (0);
