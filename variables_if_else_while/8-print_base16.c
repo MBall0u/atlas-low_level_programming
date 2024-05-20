@@ -9,7 +9,7 @@
 */
 int main(void)
 {
-	int hex[16] = "0123456789abcdef";
+	char hex[16] = "0123456789abcdef";
 	int i = 1;
 
 	while (i <= 16)
