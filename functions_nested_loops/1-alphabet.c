@@ -11,12 +11,6 @@
 */
 int _putchar(char c);
 
-int main(void)
-{
-	print_alphabet();
-	return(0);
-}
-
 void print_alphabet()
 {
 	char c = 'a';
@@ -28,4 +22,10 @@ void print_alphabet()
 	}
 	_putchar('\n');
 	return;
+}
+
+int main(void)
+{
+        print_alphabet();
+        return(0);
 }
