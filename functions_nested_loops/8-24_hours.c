@@ -20,16 +20,16 @@ void jack_bauer(void)
 		_putchar(th + '0');
 		th = h % 10;
 		_putchar(th + '0');
-		_putchar(':');
 
 		for (m = 0 ; m <= 59 ; m++)
 		{
 			int tm = m / 10;
 
+			_putchar(':');
 			_putchar(tm + '0');
 			tm = m % 10;
 			_putchar(tm + '0');
-			_putchar('\n');
 		}
+		_putchar('\n');
 	}
 }
