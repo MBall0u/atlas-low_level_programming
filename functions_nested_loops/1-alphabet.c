@@ -11,21 +11,14 @@
 */
 int _putchar(char c);
 
-void print_alphabet()
+void print_alphabet(void)
 {
 	char c = 'a';
 
-	while(c <= 'z')
+	while (c <= 'z')
 	{
 		_putchar(c);
 		c++;
 	}
 	_putchar('\n');
-	return;
-}
-
-int main(void)
-{
-        print_alphabet();
-        return(0);
 }
