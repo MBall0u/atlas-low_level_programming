@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include "main.h"
 /**
-* main - 10 x alphabet
+* print_alphabet_x10 - 10 x alphabet
 *
 * Description - Write a function that prints 10 times the alphabet,
 * in lowercase, followed by a new line
@@ -10,10 +10,10 @@
 */
 void print_alphabet_x10(void)
 {
-	int a = 1;
+	int a = 0;
 	char c = 'a';
 
-	while (a <= 10)
+	while (a < 10)
 	{
 		while (c <= 'z')
 		{

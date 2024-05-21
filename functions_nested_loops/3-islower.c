@@ -1,9 +1,11 @@
 #include <unistd.h>
 #include "main.h"
 /**
-* main - islower
+* _islower - islower
 *
 * Description - Write a function that checks for lowercase character
+*
+* @c: the decimal value for the input character
 *
 * Return: Always 0 (success)
 */
