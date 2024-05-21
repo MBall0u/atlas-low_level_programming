@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include "main.h"
 /**
-* main - I sometimes suffer from insomnia. And when I can't fall
+* print_alphabet - I sometimes suffer from insomnia. And when I can't fall
 * asleep, I play what I call the alphabet game
 *
 * Description: Write a function that prints the alphabet, in
