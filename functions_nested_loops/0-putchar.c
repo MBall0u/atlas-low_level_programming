@@ -4,6 +4,8 @@
 *
 * Description - Write a program that prints _putchar, followed by a new line
 *
+* @c: character
+*
 * Return: Always 0 (success)
 */
 int _putchar(char c);
