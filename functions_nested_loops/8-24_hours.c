@@ -18,12 +18,11 @@ void jack_bauer(void)
 		for (m = 0 ; m <= 59 ; m++)
 		{
 			int th = h / 10;
+			int tm = m / 10;
 
 			_putchar(th + '0');
 			th = h % 10;
 			_putchar(th + '0');
-
-			int tm = m / 10;
 
 			_putchar(':');
 			_putchar(tm + '0');
