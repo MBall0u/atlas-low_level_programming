@@ -12,7 +12,6 @@
 void print_square(int size)
 {
 	int i = size;
-	int h = size;
 
 	if (size <= 0)
 	{
@@ -20,6 +19,8 @@ void print_square(int size)
 	}
 	while (i > 0)
 	{
+		int h = size;
+
 		while (h > 0)
 		{
 			_putchar('#');
