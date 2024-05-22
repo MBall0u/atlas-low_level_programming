@@ -5,9 +5,9 @@
 *
 * Description - a function that multiplies two integers
 *
-* @a - variable a
+* @a: variable a that will be multiplied by variable b
 *
-* @b - variable b
+* @b: variable b that will be multiplied by variable a
 *
 * Return: Always 0 (success)
 */
