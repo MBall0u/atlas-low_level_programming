@@ -11,23 +11,25 @@
 */
 void print_diagonal(int n)
 {
-	int c = 0;
-	int i = 0;
+	int a = 1;
+	int b;
 
 	if (n == 0)
 	{
 		_putchar('\n');
 	}
 
-	while (c <= n)
+	while (a <= n)
 	{
-		while (i < n - 1)
+		b = 0;
+
+		while (b < a - 1)
 		{
 			putchar(' ');
-			i++;
+			b++;
 		}
 		_putchar('\\');
-		c++;
 		_putchar('\n');
+		a++;
 	}
 }
