@@ -1,28 +1,28 @@
 #include <unistd.h>
 #include "main.h"
 /**
+* more_numbers - Numbers constitute the only universal language
+*
+* Description - Write a function that prints 10 times the numbers, from 0 to 14, followed
+* by a new line
+*
+* Return: Always 0 (success)
 */
 void more_numbers(void)
 {
-	int i = '0';
-	int i2 = '0';
-	int c = 1;
-	int c2 = 0;
+	int i = 0;
+	int j = 0;
 
-	while (c < 10)
+	while (j < 10)
 	{
-		while (c2 < 14)
+		i = 0;
+
+		while (i <= 10)
 		{
-			if (c2 > 9)
-			{
-				_putchar(i2);
-				i2++;
-			}
-			_putchar(i);
-			c2++;
+			_putchar(i + '0');
 			i++;
 		}
-	_putchar('\n');
-	c++;
+		_putchar('\n');
+		j++;
 	}
 }
