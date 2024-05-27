@@ -26,13 +26,15 @@ void puts_half(char *str)
 			t++;
 		}
 	}
-
-	t = (c - 1) / 2;
-
-	while (t < c)
+	else if (c % 2 == 1)
 	{
-		_putchar(str[t]);
-		t++;
+		t = (c - 1) / 2;
+
+		while (t < c)
+		{
+			_putchar(str[t]);
+			t++;
+		}
 	}
 	_putchar('\n');
 }
