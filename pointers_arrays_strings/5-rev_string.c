@@ -14,9 +14,17 @@ void rev_string(char *s)
 	{
 		c++;
 	}
-	while (c > 0)
+
+	char t;
+	int i = 0;
+	int e = c-1;
+
+	while (i < e)
 	{
-		_putchar(s[c]);
-		c--;
+		t = s[i];
+		s[i] = s[e];
+		s[e] = t;
+		i++;
+		e--;
 	}
 }
