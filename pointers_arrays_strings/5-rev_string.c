@@ -10,14 +10,17 @@ void rev_string(char *s)
 {
 	int c = 0;
 	char t;
+	int i;
+	int e;
+
 
 	while (s[c] != '\0')
 	{
 		c++;
 	}
 
-	int i = 0;
-	int e = c - 1;
+	i = 0;
+	e = c - 1;
 
 	while (i < e)
 	{
