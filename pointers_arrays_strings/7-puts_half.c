@@ -1,6 +1,10 @@
 #include <unistd.h>
 #include "main.h"
 /**
+* puts_half - jbsdfjbsdf
+* Description - sdnfksdkjf
+* @str: sbfkjsdf
+* Return: Always 0 (succes)
 */
 void puts_half(char *str)
 {
@@ -22,12 +26,13 @@ void puts_half(char *str)
 			t++;
 		}
 	}
-	else
-		t = (c - 1) / 2;
 
-		while (t < c)
-		{
-			_putchar(str[t]);
-			t++;
-		}
+	t = (c - 1) / 2;
+
+	while (t < c)
+	{
+		_putchar(str[t]);
+		t++;
+	}
+	_putchar('\n');
 }
