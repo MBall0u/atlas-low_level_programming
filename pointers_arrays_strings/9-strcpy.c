@@ -6,7 +6,7 @@
 * @src: variable 2
 * Return: Always 0 (success)
 */
-char *_strcopy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 	while (*src != '\0')
 	{
