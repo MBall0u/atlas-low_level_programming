@@ -7,13 +7,13 @@
 */
 int _atoi(char *s)
 {
-	int s = 1;
+	int sn = 1;
 	int r = 0;
 	int i = 0;
 
 	if (s[0] == '-')
 	{
-		s = -1;
+		sn = -1;
 		i++;
 	}
 
@@ -34,7 +34,7 @@ int _atoi(char *s)
 		}
 		i++;
 	}
-	r = r * s
+	r = r * sn;
 
 	return r;
 }
