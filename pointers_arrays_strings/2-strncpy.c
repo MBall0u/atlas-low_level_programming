@@ -11,31 +11,23 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	char *temp = dest;
 	char *count = src;
-	int tc = 0;
 	int cc = 0;
 
 	while (*count != '\0')
 	{
-		*count++;
-		cc++;
+		++count;
+		++cc;
 	}
 
-	if (n > cc)
+	if (n < cc)
 	{
-		while (*src != '\0' && tc < n)
-		{
-			*temp++ = *src++;
-			tc++;
-		}
-
-		*temp = '\0';
+		cc = n;
 	}
 
-	while (*src != '\0' && tc < n)
+	while (cc-- > 0 && *src != '\0')
 	{
 		*temp++ = *src++;
-		tc++;
 	}
-
+	*temp = '\0';
 	return (dest);
 }
