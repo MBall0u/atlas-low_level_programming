@@ -19,15 +19,24 @@ char *_strncpy(char *dest, char *src, int n)
 		++cc;
 	}
 
-	if (n < cc)
+	if (cc > n)
 	{
 		cc = n;
+
+		while (cc-- > 0 && *src != '\0')
+		{
+			*temp++ = *src++;
+		}
+
+		return (dest);
 	}
 
 	while (cc-- > 0 && *src != '\0')
 	{
 		*temp++ = *src++;
 	}
+
 	*temp = '\0';
+
 	return (dest);
 }
