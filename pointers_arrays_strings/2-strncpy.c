@@ -36,12 +36,7 @@ char *_strncpy(char *dest, char *src, int n)
 		*temp++ = *src++;
 	}
 
-	while (n > 0)
-	{
-		*temp = '\0';
-		*temp++;
-		n--;
-	}
+	*temp = '\0';
 
 	return (dest);
 }
