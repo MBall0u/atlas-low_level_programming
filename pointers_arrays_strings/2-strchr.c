@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
 * _strchr - checks the provided string for c
 * Description - for each character of the array it is going to look for
