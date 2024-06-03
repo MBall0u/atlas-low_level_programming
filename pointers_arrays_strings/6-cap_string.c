@@ -23,7 +23,7 @@ char *cap_string(char *str)
 
 		c = 0;
 		b = 0;
-		while (sep[b] < 13)
+		while (b < 13)
 		{
 			if (s[a] == sep[b])
 			{
