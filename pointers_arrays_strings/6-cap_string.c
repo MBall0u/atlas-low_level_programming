@@ -3,80 +3,38 @@
 * cap_string - captitalize the first letter of each word after a seperator
 * Description - iterates through a provided string, checks to see if the
 * the first letter is lowercase if so it makes it uppercase
-* @string: the inputted string
+* @str: the inputted string
 * Return: Always 0 (success)
 */
-char *cap_string(char *string)
+char *cap_string(char *str)
 {
-	char *temp = string;
+	char *s = str;
+	char sep[13] = " \t\n,;.!?\"(){}";
+	int a = 0;
+	int b;
+	int c = 1;
 
-	while (*temp != '\0')
+	while (s[a] != '\0')
 	{
-		if (*temp >= 'A' && *temp <= 'Z')
+		if (c && s[a] >= 'a' && s[a] <= 'z')
 		{
-			temp++;
+			s[a] = s[a] - 32;
 		}
 
-		else if (*temp == ' ' || *temp == '\t' || *temp == '\n' || *temp == ',')
+		c = 0;
+		b = 0;
+		while (sep[b] < 13)
 		{
-			temp++;
-
-			if (*temp >= 'A' && *temp <= 'Z')
+			if (s[a] == sep[b])
 			{
-				temp++;
+				c = 1;
 			}
 
-			if (*temp >= 'a' && *temp <= 'z')
-			{
-				*temp = *temp - 32;
-			}
+			b++;
 		}
 
-		else if (*temp == ';' || *temp == '.' || *temp == '!' || *temp == '?')
-		{
-			temp++;
-
-			if (*temp >= 'A' && *temp <= 'Z')
-			{
-				temp++;
-			}
-
-			if (*temp >= 'a' && *temp <= 'z')
-			{
-				*temp = *temp - 32;
-			}
-		}
-
-		else if (*temp == '"' || *temp == '{' || *temp == '}')
-		{
-			temp++;
-
-			if (*temp >= 'A' && *temp <= 'Z')
-			{
-				temp++;
-			}
-
-			if (*temp >= 'a' && *temp <= 'z')
-			{
-				*temp = *temp - 32;
-			}
-		}
-
-		else if (*temp == '(' || *temp == ')')
-		{
-			temp++;
-
-			if (*temp >= 'A' && *temp <= 'Z')
-			{
-				temp++;
-			}
-
-			if (*temp >= 'a' && *temp <= 'z')
-			{
-				*temp = *temp - 32;
-			}
-		}
+		a++;
 	}
 
-	return (string);
+	return (str);
 }
