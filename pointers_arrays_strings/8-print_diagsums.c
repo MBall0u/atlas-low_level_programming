@@ -16,11 +16,11 @@ void print_diagsums(int *a, int size)
 
 	for (b = 0; b < size; b++)
 	{
-		sum1 += a[b][b];
+		sum1 += (*a[b][b]);
 	}
 	for (b = 0; b < size; b++)
 	{
-		sum2 += a[b][c];
+		sum2 += (*a[b][c]);
 		c--;
 	}
 	printf("%d, %d\n", sum1, sum2);
