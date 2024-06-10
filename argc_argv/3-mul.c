@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
 * main - this is going to take two number and multiply them
 * Description - see comment above
@@ -19,7 +20,7 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i <= argc; i++)
 	{
-		result *= _atoi(argv[i]);
+		result *= atoi(argv[i]);
 	}
 	printf("%d\n", result);
 	return (0);
