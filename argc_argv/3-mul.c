@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i <= argc; i++)
 	{
-		result *= atoi(argv[i]);
+		result *= _atoi(argv[i]);
 	}
 	printf("%d\n", result);
 	return (0);
