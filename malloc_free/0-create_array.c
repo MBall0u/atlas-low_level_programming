@@ -11,25 +11,25 @@
 */
 char *create_array(unsigned int size, char c)
 {
-    unsigned int i;
-    char *ptr;
+	unsigned int i;
+	char *ptr;
 
-    while (1)
-    {
-        ptr = malloc(sizeof(char) * size + 1);
+	while (1)
+	{
+		ptr = malloc(sizeof(char) * size + 1);
 
-        if (ptr == NULL)
-        {
-            return (NULL);
-        }
-        if (size == 0)
-        {
-            return (NULL);
-        }
-        for (i = 0; i <= size; i++)
-        {
-            ptr[i] = c;
-        }
-        return (ptr);
-    }
+		if (ptr == NULL)
+		{
+			return (NULL);
+		}
+		if (size == 0)
+		{
+			return (NULL);
+		}
+		for (i = 0; i <= size; i++)
+		{
+			ptr[i] = c;
+		}
+		return (ptr);
+	}
 }
