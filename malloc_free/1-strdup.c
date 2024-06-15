@@ -2,11 +2,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ * _strdup - this duplicates a string
+ * Description - see above comment
+ * @str: the provided string
+ * Return: Always 0 (success)
 */
 char *_strdup(char *str)
 {
     char *new_str;
     int i, count = 0;
+
+    if (str == NULL)
+    {
+        return (NULL);
+    }
 
     for (i = 0; str[i] != '\0'; i++)
     {
