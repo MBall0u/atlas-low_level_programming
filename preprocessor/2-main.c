@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
 */
-void main()
+int main(void)
 {
 	printf("%s\n", __BASE_FILE__);
 }
