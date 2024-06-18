@@ -34,15 +34,21 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
-	for (i = 0; s1[i] != '\0'; i++)
+	if (s1 != NULL)
 	{
-		ptr[j] = s1[i];
-		j++;
+		for (i = 0; s1[i] != '\0'; i++)
+		{
+			ptr[j] = s1[i];
+			j++;
+		}
 	}
-	for (i = 0; i < n && s2[i] != '\0'; i++)
+	if (s2 != NULL)
 	{
-		ptr[j] = s2[i];
-		j++;
+		for (i = 0; i < n && s2[i] != '\0'; i++)
+		{
+			ptr[j] = s2[i];
+			j++;
+		}
 	}
 	ptr[j] = '\0';
 	return (ptr);
