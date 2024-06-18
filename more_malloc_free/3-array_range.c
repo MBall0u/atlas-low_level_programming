@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * 
- * 
- * 
- * 
- * 
+ * array_range - creates an array of integers
+ * Description - see above
+ * @min: min
+ * @max: max
+ * Return: Always 0 (success)
 */
 int *array_range(int min, int max)
 {
