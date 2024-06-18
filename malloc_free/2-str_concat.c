@@ -21,35 +21,35 @@ char *str_concat(char *s1, char *s2)
 		count++;
 	}
 	new_str = malloc(sizeof(char) * count);
-	while (1)
+	if (new_str == NULL)
 	{
-		if (s1 == NULL)
-		{
-			break;
-		}
-		else
-		{
-			for (i = 0; s1[i] != '\0'; i++)
-			{
-				new_str[j] = s1[i];
-				j++;
-			}
-		}
-		if (s2 == NULL)
-		{
-			break;
-		}
-		else
-		{
-			for (i = 0; s2[i] != '\0'; i++)
-			{
-				new_str[j] = s2[i];
-				j++;
-			}
-		}
-		j++;
-		new_str[j] = '\0';
-		return (new_str);
+		return (NULL);
 	}
-	return (NULL);
+	if (s1 == NULL)
+	{
+		break;
+	}
+	else		
+	{
+		for (i = 0; s1[i] != '\0'; i++)
+		{
+			new_str[j] = s1[i];
+			j++;
+		}
+	}
+	if (s2 == NULL)
+	{
+		break;
+	}
+	else
+	{
+		for (i = 0; s2[i] != '\0'; i++)
+		{
+			new_str[j] = s2[i];
+			j++;
+		}
+	}
+	j++;
+	new_str[j] = '\0';
+	return (new_str);
 }
