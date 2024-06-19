@@ -1,3 +1,6 @@
+#ifndef dog_h
+#define dog_h
+
 /**
 * struct dog - setting up a new structure
 * @name: dog name
@@ -6,10 +9,9 @@
 *
 * Description: see above comments for a description
 */
-#ifndef dog_h
-#define dog_h
 
-struct dog {
+struct dog
+{
 	char *name;
 	float age;
 	char *owner;
