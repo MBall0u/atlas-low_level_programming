@@ -11,7 +11,7 @@
 */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	long unsigned int count;
+	unsigned long int count;
 
 	for (count = 0; count < size; count++)
 	{
