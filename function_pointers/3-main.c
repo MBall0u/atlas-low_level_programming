@@ -32,13 +32,13 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	if ((op == '/' || op == '%') && (num2 == 0))
+	if ((op[0] == '/' || op[0] == '%') && (num2 == 0))
 	{
 		printf("Error\n");
 		exit(100);
 	}
 
-	printf("%d\n", (get_op_func(argv[2])(num1, num2)));
+	printf("%d\n", (get_op_func(op)(num1, num2)));
 
 	return (0);
 }
