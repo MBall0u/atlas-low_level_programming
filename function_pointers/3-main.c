@@ -15,7 +15,7 @@
 int main(int argc, char *argv[])
 {
 	int num1, num2;
-	char op;
+	char *op;
 
 	if (argc != 4)
 	{
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	op = argv[2][0];
+	op = argv[2];
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 
