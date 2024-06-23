@@ -15,7 +15,7 @@
 int main(int argc, char *argv[])
 {
 	int num1 = atoi(argv[1]), num2 = atoi(argv[3]);
-	int i = 'argv[2]';
+	const unsigned int i = 'argv[2]';
 
 	if (argc != 4)
 	{
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	printf("%d\n", get_op_func(argv[2])(num1, num2));
+	printf("%d\n", (*get_op_func(argv[2]))(num1, num2));
 
 	return (0);
 }
