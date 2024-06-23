@@ -1,0 +1,51 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+void lowercase(char *str)
+{
+  char *ptr = str;
+  int i;
+  
+  for (i = 0; ptr[i] != '\0'; i++)
+  {
+    if (ptr[i] >= 'A' && ptr[i] <= 'Z')
+    {
+      ptr[i] += 32;
+    }
+  }
+}
+
+void uppercase(char *str)
+{
+  char *ptr = str;
+  int i;
+  
+  for (i = 0; ptr[i] != '\0'; i++)
+  {
+    if (ptr[i] >= 'a' && ptr[i] <= 'z')
+    {
+      ptr[i] -= 32;
+	}
+  }
+}
+
+int main()
+{
+  char str[] = "BesT ScHooL";
+  void (*case_change[])(char) = {uppercase, lowercase};
+  unsigned int i;
+  
+  printf("Enter choice: 0 to set the string to uppercase or"
+  "1 to set the string to lowercase\n");
+  scanf("%d", &i);
+  
+  if (i > 1)
+  {
+    return (0);
+  }
+  
+  printf("%s", str);
+  (*case_change[i])(str);
+  printf("%s", str);
+  return (0);
+}
