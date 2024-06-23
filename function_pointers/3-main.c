@@ -24,12 +24,12 @@ int main(int argc, char *argv[])
 	}
 	if (op < '%' || op > '/')
 	{
-		printf("Error\n")
+		printf("Error\n");
 		exit(99);
 	}
 	if ((op == '/' || op == '%') && (num2 == 0))
 	{
-		printf("Error\n")
+		printf("Error\n");
 		exit(100);
 	}
 
