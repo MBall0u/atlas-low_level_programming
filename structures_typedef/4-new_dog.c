@@ -7,7 +7,7 @@
  * @name: name
  * @age: age
  * @owner: owner
- * Result: Always 0 (success)
+ * Return: Always 0 (success)
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -20,8 +20,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_dog);
 		return (NULL);
 	}
+
 	new_dog->name = name_dup;
 	new_dog->age = age;
 	new_dog->owner = owner_dup;
+
 	return (new_dog);
 }
