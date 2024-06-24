@@ -4,7 +4,7 @@
 /**
 * print_strings - prints strings
 * Description - see above
-* @seperator: prints inbetween the strings
+* @separator: prints inbetween the strings
 * @n: the amount of strings
 * Return: Always 0 (success)
 */
