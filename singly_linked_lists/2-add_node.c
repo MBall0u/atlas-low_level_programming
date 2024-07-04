@@ -36,7 +36,7 @@ list_t *add_node(list_t **head, const char *str)
 		}
 		temp->next = new;
 	}
-	return (&new);
+	return (&head);
 }
 /**
  * _strlen - counts the amount of characters in a string
