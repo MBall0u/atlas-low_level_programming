@@ -1,0 +1,1 @@
+This directory is going to be used for the project C - Singly linked lists.
