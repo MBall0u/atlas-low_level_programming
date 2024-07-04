@@ -11,16 +11,16 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *temp;
-	list_t *new = malloc(sizeof(list_t));
+	list_t *new;
 
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
 	{
-		return (1);
+		return (NULL);
 	}
 
 	new->str = strdup(str);
-	new->len = (_strlen(str));
+	new->len = _strlen(str);
 	new->next = NULL;
 
 	if (*head == NULL)
@@ -36,7 +36,7 @@ list_t *add_node(list_t **head, const char *str)
 		}
 		temp->next = new;
 	}
-	return (0);
+	return (&new);
 }
 /**
  * _strlen - counts the amount of characters in a string
