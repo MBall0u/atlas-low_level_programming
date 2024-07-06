@@ -12,7 +12,7 @@ unsigned int binary_to_uint(const char *b)
 	int count = 0, power, pow_count, pos = 0;
 
 	if (b == NULL)
-		return (NULL);
+		return (0);
 	while (b[count] != '\0')
 		count++;
 	count--;
