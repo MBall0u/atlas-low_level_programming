@@ -17,7 +17,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	{
 		i <<= 1;
 		count++;
-		if (i > n )
+		if (i > n)
 		{
 			count--;
 			i >>= 1;
@@ -38,7 +38,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		else
 		{
 			if (count == index)
-				return(0)
+				return(0);
 			count--;
 		}
 		i >>= 1;
