@@ -13,13 +13,14 @@ void print_binary(unsigned long int n)
 	while (i < n)
 	{
 		i <<= 1;
-		if (i >= n)
+		if (i > n)
 		{
 			i >>= 1;
 			break;
 		}
+		if (i == n)
+			break;
 	}
-
 	while (i > 0)
 	{
 		if (n >= i)
@@ -28,10 +29,7 @@ void print_binary(unsigned long int n)
 			n -= i;
 		}
 		else
-		{
 			_putchar('0');
-		}
-
 		i >>= 1;
 	}
 }
