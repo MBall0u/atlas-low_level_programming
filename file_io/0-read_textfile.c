@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 /**
  * read_textfile - will read the given file and return
  * the number of characters printed to stdout
@@ -11,6 +11,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int n, fd;
 	char buf[letters + 1];
+
+	if (filename == NULL)
+		return (0);
 
 	fd = open(filename, O_RDONLY);
 	n = read(fd ,buf, letters);
