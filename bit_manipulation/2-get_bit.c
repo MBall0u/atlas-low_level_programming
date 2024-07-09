@@ -26,6 +26,8 @@ int get_bit(unsigned long int n, unsigned int index)
 		if (i == n)
 			break;
 	}
+	if (count < index)
+		return(0);
 	while (i > 0)
 	{
 		if (n >= i)
