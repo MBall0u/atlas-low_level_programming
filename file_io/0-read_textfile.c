@@ -11,7 +11,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	long unsigned int a;
 	char *buffer;
-	FILE *input;
+	int input;
 
 	if (filename == NULL || letters == 0)
 		return(0);
@@ -36,7 +36,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	buffer[letters] = '\0';
-	
+
 	puts(buffer);
 
 	close(input);
