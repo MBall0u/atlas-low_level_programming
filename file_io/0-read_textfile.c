@@ -10,16 +10,32 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int a;
-	FILE *output;
+	char *buffer;
+	FILE *input;
 
 	if (filename == NULL)
 		return(0);
 
-	output = fopen(filename, "r");
-	if (!output)
+	input = fopen(filename, "r");
+	if (!input)
 		return(0);
 
-	a = fwrite(output, sizeof(char), letters, stdout);
+	buffer = malloc(sizeof(char) * letters);
+	if (!buffer)
+		return(0);
+	
+	a = fread(buffer, sizeof(char), letters, input);
+
+	if (a != letters)
+	{
+		fclose(input);
+		return(0);
+	}
+
+	fwrite(buffer, sizeof(char), a stdout);
+
+	fclose(input);
+	free(buffer);
 
 	return(a);
 }
