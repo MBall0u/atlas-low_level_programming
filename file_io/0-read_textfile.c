@@ -13,24 +13,30 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buffer;
 	FILE *input;
 
-	if (filename == NULL)
+	if (filename == NULL || letters == 0)
 		return(0);
 
 	input = open(filename, O_RDONLY);
-	if (!input)
+	if (input == -1)
 		return(0);
 
-	buffer = malloc(sizeof(char) * letters);
+	buffer = malloc(letters + 1);
 	if (!buffer)
+	{
+		close(input);
 		return(0);
+	}
 	
 	a = read(input, buffer, letters);
-
 	if (a != letters)
 	{
+		free(buffer);
+		close(input);
 		return(0);
 	}
 
+	buffer[letters] = '\0';
+	
 	puts(buffer);
 
 	close(input);
