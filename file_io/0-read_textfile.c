@@ -16,7 +16,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filename == NULL)
 		return(0);
 
-	input = fopen(filename, "r");
+	input = open(filename, O_RDONLY);
 	if (!input)
 		return(0);
 
@@ -24,17 +24,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (!buffer)
 		return(0);
 	
-	a = fread(buffer, sizeof(char), letters, input);
+	a = read(input, buffer, letters);
 
 	if (a != letters)
 	{
-		fclose(input);
 		return(0);
 	}
 
-	fwrite(buffer, sizeof(char), a, stdout);
+	puts(buffer);
 
-	fclose(input);
+	close(input);
 	free(buffer);
 
 	return(a);
