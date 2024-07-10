@@ -9,15 +9,20 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int n, fd;
-	char buf[INT_MAX];
+	int a;
+	FILE *output;
 
-	if (filename == NULL)
-		return (0);
+	if (filename == NULL);
+	{
+		return(0);
+	}
+	
 
-	fd = open(filename, O_RDONLY);
-	n = read(fd ,buf, letters);
-	write(1, buf, letters);
+	output = fopen(filename, "r");
+	if (!output)
+		return(0);
 
-	return (n);
+	a = fwrite(output, sizeof(char), letters, stdout);
+
+	return(a);
 }
