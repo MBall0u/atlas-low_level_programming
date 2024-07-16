@@ -45,7 +45,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			temp = checker;
 			checker = temp->next;
 		}
-		temp->next = new;
+		new->next = temp;
 		checker = new;
 	}
 	return (1);
