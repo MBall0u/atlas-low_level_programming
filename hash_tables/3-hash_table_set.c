@@ -27,7 +27,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new->value = strdup(value);
 	new->next = NULL;
 
-	checker = ht->array[index]
+	checker = ht->array[index];
 
 	if (checker == NULL)
 	{
