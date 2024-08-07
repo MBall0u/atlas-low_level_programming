@@ -36,7 +36,7 @@ int binary_search(int *array, size_t size, int value)
 /**
 * print_array - prints the array in the specified size
 * Description - takes in the two bounds and prints the array
-* @array - the inputted array
+* @array: the inputted array
 * @pos_low: the bottom of the given array
 * @pos_high: the top of the given array
 * Return: void
