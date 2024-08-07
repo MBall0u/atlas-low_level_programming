@@ -45,7 +45,7 @@ void print_array(int *array, int pos_low, int pos_high)
 {
 	int pos;
 
-	printf("Searching in array: ", array[pos_low]);
+	printf("Searching in array: %d", array[pos_low]);
 	for (pos = pos_low + 1; pos <= pos_high; pos++)
 		printf(", %d", array[pos]);
 	putchar('\n');
