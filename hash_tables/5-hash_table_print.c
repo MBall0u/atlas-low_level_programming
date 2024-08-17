@@ -11,9 +11,9 @@ void hash_table_print(const hash_table_t *ht)
 	long unsigned int index, comma = 0;
 	hash_node_t *temp;
 
-	printf("{");
 	if (ht)
 	{
+		printf("{");
 		for (index = 0; index < ht->size; index++)
 		{
 			if (ht->array[index])
@@ -36,7 +36,7 @@ void hash_table_print(const hash_table_t *ht)
 				}
 			}
 		}
+		printf("}");
+		putchar('\n');
 	}
-	printf("}");
-	putchar('\n');
 }
