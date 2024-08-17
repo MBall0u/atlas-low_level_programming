@@ -26,11 +26,14 @@ void hash_table_print(const hash_table_t *ht)
 			}
 			if (temp->next)
 			{
-				if (comma != 0)
-					printf(", ");
-				temp = ht->array[index];
-				printf("'%s': '%s'", temp->key, temp->value);
-				comma++;
+				while (temp->next)
+				{
+					if (comma != 0)
+						printf(", ");
+					temp = temp->next;
+					printf("'%s': '%s'", temp->key, temp->value);
+					comma++;
+				}
 			}
 		}
 	}
